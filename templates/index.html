@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify API</title>
+    <meta http-equiv="refresh" content="0.5">
+    <style>
+        
+        /* Styling for the box */
+        .result-box {
+            width: auto;
+            max-width: max-content;
+            padding: 20px;
+            border: 1px solid rgb(255, 255, 255);
+            margin: 10px;
+        }
+
+        h1 {
+            display: inline-block; /* Make the h1 elements inline-block */
+            margin:10px 0; /* Remove default margin to ensure elements are flush */
+        }
+
+        #timestamp {
+            margin-right: 5px; /* Add margin between timestamp and the pause icon */
+        }
+
+        .pause-icon {
+            width: 40px;
+            height: 40px;
+            vertical-align: text-bottom;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-box">
+        <h1>{{ track_full }}</h1>
+        <div></div>
+        <h1>{{ timestamp }}</h1>
+        {% if not isPaused %}
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 16" width="20" height="20" class="pause-icon">
+                <path fill="currentColor" d="M9 6H7v12h2zm4 0h-2v12h2z"/>
+            </svg>
+        {% endif %}
+        <div></div>
+        <h1>{{ pbar }}</h1>
+    </div>
+</body>
+</html>
