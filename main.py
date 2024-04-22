@@ -151,7 +151,7 @@ def refresh_token():
 def connect_to_arduino():
     global arduino
     port = input("Please input Arduino COM port number: ")
-    arduino = serial.Serial(port='COM'+port, baudrate=9600, timeout=.1)
+    arduino = serial.Serial(port='COM'+port, baudrate=115200, timeout=.1)
     time.sleep(3)
     return redirect('/login')
 
