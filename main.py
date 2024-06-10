@@ -1,5 +1,3 @@
-#https://github.com/MikeyPPPPPPPP/ArduinoProjects/blob/main/app.py
-
 import requests
 import urllib.parse
 from flask import Flask, redirect, request, jsonify, session, render_template
